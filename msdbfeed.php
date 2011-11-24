@@ -3,7 +3,7 @@
 Plugin Name: Multisite Dashboard Feed Widget
 Plugin URI: http://wpti.ps/category/plugins/
 Description: This dashboard widget shows the latest Posts from the main site of a multisite install in the top of the Dashboard of the sites hanging under the multisite install.
-Version: 1.1
+Version: 1.2.2
 Author: Piet Bos
 Author URI: http://wpti.ps
 License: GPL2
