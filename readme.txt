@@ -3,7 +3,7 @@ Contributors: senlin
 Donate link: http://senl.in/PPd0na
 Tags: multisite, dashboard, feed, widget, admin, rss
 Requires at least: 3.1.2
-Tested up to: 3.1.2
+Tested up to: 3.3
 Stable tag: 1.2
 
 Shows the latest Posts from the main site of a multisite install in the top of the Dashboard of the sites hanging under the multisite install.
@@ -47,7 +47,7 @@ The name of the plugin is Multisite Dashboard Feed Widget, there must be a good 
 
 == Screenshots ==
 
-1. Siteadmin Dashboard after installation (This screen shot description corresponds to screenshot-1.jpg).
+1. Siteadmin Dashboard after installation.
 
 == Changelog ==
 
