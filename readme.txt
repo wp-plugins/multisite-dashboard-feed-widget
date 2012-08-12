@@ -4,7 +4,8 @@ Donate link: http://senl.in/PPd0na
 Tags: multisite, dashboard, feed, widget, admin, rss
 Requires at least: 3.1.2
 Tested up to: 3.4.1
-Stable tag: 1.2.3
+Stable tag: 1.3
+License: GPLv2 or later
 
 Shows the latest Posts from the main site of a multisite install in the top of the Dashboard of the sites hanging under the multisite install.
 
@@ -43,13 +44,16 @@ After editing the file(s), you can follow step 1-3 above to install the plugin.
 
 = Can I use this plugin also on a single WordPress install? =
 
-The name of the plugin is Multisite Dashboard Feed Widget, there must be a good reason for that, right? You can of course change the RSS URL (see Installation) to use it on a single WordPress install.
+You could, but you'd probably be better off by installing the [Dashboard Feed Widget](http://wordpress.org/extend/plugins/dashboard-feed-widget/) plugin that I released in August 2012. That plugin actually comes with its own Settings page too.
 
 == Screenshots ==
 
 1. Siteadmin Dashboard after installation.
 
 == Changelog ==
+
+= 1.3 =
+* Adjusted FAQ
 
 = 1.2.3 =
 * Changed compatibility to WP 3.4.1
