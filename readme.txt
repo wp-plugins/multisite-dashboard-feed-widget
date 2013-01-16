@@ -3,7 +3,7 @@ Contributors: senlin
 Donate link: http://senl.in/PPd0na
 Tags: multisite, dashboard, feed, widget, admin, rss
 Requires at least: 3.1.2
-Tested up to: 3.4.1
+Tested up to: 3.5
 Stable tag: 1.3
 License: GPLv2 or later
 
