@@ -3,8 +3,8 @@ Contributors: senlin
 Donate link: http://senl.in/PPd0na
 Tags: multisite, dashboard, feed, widget, admin, rss
 Requires at least: 3.1.2
-Tested up to: 3.5
-Stable tag: 1.3
+Tested up to: 3.6
+Stable tag: 1.3.1
 License: GPLv2 or later
 
 Shows the latest Posts from the main site of a multisite install in the top of the Dashboard of the sites hanging under the multisite install.
@@ -51,6 +51,10 @@ You could, but you'd probably be better off by installing the [Dashboard Feed Wi
 1. Siteadmin Dashboard after installation.
 
 == Changelog ==
+
+= 1.3.1 =
+* Changed compatibility to WP 3.6
+* prevent direct access to file
 
 = 1.3 =
 * Adjusted FAQ
