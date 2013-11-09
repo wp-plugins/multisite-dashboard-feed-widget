@@ -4,7 +4,7 @@ Donate link: http://senl.in/PPd0na
 Tags: multisite, dashboard, feed, widget, admin, rss
 Requires at least: 3.6
 Tested up to: 3.7.1
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 
 Shows the latest Posts from the main site of a multisite install in the top of the Dashboard of the sites hanging under the multisite install.
@@ -62,6 +62,10 @@ Please open an issue over at [Github](https://github.com/so-wp/so-multisite-dash
 1. Siteadmin Dashboard after installation.
 
 == Changelog ==
+
+= 1.4.1 =
+
+* change text domain to prepare for language packs (via Otto - http://otto42.com/el)
 
 = 1.4.0 =
 * Recode the plugin and add Options page (at last)

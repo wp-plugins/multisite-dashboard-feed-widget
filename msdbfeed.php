@@ -3,9 +3,11 @@
 Plugin Name: SO Multisite Dashboard Feed Widget
 Plugin URI: https://github.com/so-wp/so-multisite-dashboard-feed-widget
 Description: This dashboard widget shows the latest Posts from the main site of a multisite install in the top of the Dashboard of the sites hanging under the multisite install.
-Version: 1.4.0
+Version: 1.4.1
 Author: Piet Bos
 Author URI: http://senlinonline.com
+Text Domain: multisite-dashboard-feed-widget
+Domain Path: /languages
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -73,7 +75,7 @@ function msdbfeed_check_admin_notices()
 	// this plugin's name
 	$name = get_file_data( __FILE__, array ( 'Plugin Name' ), 'plugin' );
 
-	printf( __( '<div class="error"><p>%1$s</p><p><i>%2$s</i> has been deactivated.</p></div>', 'msdbfeed' ),
+	printf( __( '<div class="error"><p>%1$s</p><p><i>%2$s</i> has been deactivated.</p></div>', 'multisite-dashboard-feed-widget' ),
 		join( '</p><p>', $errors ),
 		$name[0]
 	);
@@ -120,7 +122,7 @@ function msdbfeed_add_defaults() {
 	if ( ( ! is_array( $tmp ) ) ) {
 		
 		$arr = array(
-			'widget_title' => __( 'Recent Updates', 'msdbfeed' ),
+			'widget_title' => __( 'Recent Updates', 'multisite-dashboard-feed-widget' ),
 			'drp_select_box' => '3',
 		);
 		
@@ -147,7 +149,7 @@ function msdbfeed_init() {
 function msdbfeed_i18n() {
 
 	/* Load the translation of the plugin. */
-	load_plugin_textdomain( 'msdbfeed', false, basename( dirname( __FILE__ ) ) . '/languages' );
+	load_plugin_textdomain( 'multisite-dashboard-feed-widget', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 
 
@@ -174,9 +176,9 @@ function msdbfeed_render_form() { ?>
 		<!-- Display Plugin Icon, Header, and Description -->
 		<div class="icon32" id="icon-options-general"></div>
 		
-		<h2><?php _e( 'SO Multisite Dashboard Feed Widget Settings', 'msdbfeed' ); ?></h2>
+		<h2><?php _e( 'SO Multisite Dashboard Feed Widget Settings', 'multisite-dashboard-feed-widget' ); ?></h2>
 		
-		<p><?php _e( 'Below you can adjust the output of the SO Multisite Dashboard Feed Widget Settings. You can change the title of the widget and the amount of feed items to show.', 'msdbfeed' ); ?></p>
+		<p><?php _e( 'Below you can adjust the output of the SO Multisite Dashboard Feed Widget Settings. You can change the title of the widget and the amount of feed items to show.', 'multisite-dashboard-feed-widget' ); ?></p>
 
 		<!-- Beginning of the Plugin Options Form -->
 		<form method="post" action="options.php">
@@ -192,18 +194,18 @@ function msdbfeed_render_form() { ?>
 
 				<!-- Textbox Control -->
 				<tr>
-					<th scope="row"><?php _e( 'Widget Title', 'msdbfeed' ); ?></th>
+					<th scope="row"><?php _e( 'Widget Title', 'multisite-dashboard-feed-widget' ); ?></th>
 					<td>
 						<input type="text" size="57" name="msdbfeed_options[widget_title]" value="<?php echo $options['widget_title']; ?>" /><br />
 						<span style="color: #666; margin-left: 2px;">
-							<?php _e( 'Change the title of the SO Multisite Dashboard Feed Widget into something of your liking', 'msdbfeed' ); ?>
+							<?php _e( 'Change the title of the SO Multisite Dashboard Feed Widget into something of your liking', 'multisite-dashboard-feed-widget' ); ?>
 						</span>
 					</td>
 				</tr>
 
 				<!-- Select Drop-Down Control -->
 				<tr>
-					<th scope="row"><?php _e( 'How many Feed Items to show in the SO Multisite Dashboard Feed Widget', 'msdbfeed' ); ?></th>
+					<th scope="row"><?php _e( 'How many Feed Items to show in the SO Multisite Dashboard Feed Widget', 'multisite-dashboard-feed-widget' ); ?></th>
 					<td>
 						<select name='msdbfeed_options[drp_select_box]'>
 							<option value='1' <?php selected( '1', $options['drp_select_box'] ); ?>>1</option>
@@ -218,7 +220,7 @@ function msdbfeed_render_form() { ?>
 							<option value='10' <?php selected( '10', $options['drp_select_box'] ); ?>>10</option>
 						</select>
 						<span style="color: #666; margin-left: 2px;">
-							<?php _e( 'How many feed items to show in the widget?', 'msdbfeed' ); ?>
+							<?php _e( 'How many feed items to show in the widget?', 'multisite-dashboard-feed-widget' ); ?>
 						</span>
 					</td>
 				</tr>
@@ -232,7 +234,7 @@ function msdbfeed_render_form() { ?>
 			</table>
 			
 			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'msdbfeed' ) ?>" />
+				<input type="submit" class="button-primary" value="<?php _e( 'Save Settings', 'multisite-dashboard-feed-widget' ) ?>" />
 			</p>
 		
 		</form>
@@ -241,7 +243,7 @@ function msdbfeed_render_form() { ?>
 			
 			<?php
 			/* Translators: 1 is link to WP Repo */
-			printf( __( 'If you have found this plugin at all useful, please give it a favourable rating in the <a href="%s" title="Rate this plugin!">WordPress Plugin Repository</a>.', 'msdbfeed' ), 
+			printf( __( 'If you have found this plugin at all useful, please give it a favourable rating in the <a href="%s" title="Rate this plugin!">WordPress Plugin Repository</a>.', 'multisite-dashboard-feed-widget' ), 
 				esc_url( 'http://wordpress.org/plugins/multisite-dashboard-feed-widget/' )
 			);
 			?>
@@ -251,13 +253,13 @@ function msdbfeed_render_form() { ?>
 		<div class="postbox" style="display: block; float: left; width: 500px; margin: 30px 10px 10px 0;">
 			
 			<h3 class="hndle" style="padding: 5px;">
-				<span><?php _e( 'About the Author', 'msdbfeed' ); ?></span>
+				<span><?php _e( 'About the Author', 'multisite-dashboard-feed-widget' ); ?></span>
 			</h3>
 			
 			<div class="inside">
 				<img src="http://www.gravatar.com/avatar/<?php echo md5( 'info@senlinonline.com' ); ?>" style="float: left; margin-right: 10px; padding: 3px; border: 1px solid #DFDFDF;"/>
 				<p style="height: 60px; padding-top: 20px">
-					<?php printf( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'msdbfeed' ),
+					<?php printf( __( 'Hi, my name is Piet Bos, I hope you like this plugin! Please check out any of my other plugins on <a href="%s" title="SO WP Plugins">SO WP Plugins</a>. You can find out more information about me via the following links:', 'multisite-dashboard-feed-widget' ),
 					esc_url( 'http://so-wp.github.io/' )
 					); ?>
 				</p>
@@ -265,11 +267,11 @@ function msdbfeed_render_form() { ?>
 				<ul style="clear: both; margin-top: 20px;">
 					<li><a href="http://senlinonline.com/" target="_blank" title="Senlin Online"><?php _e('Senlin Online', 'msdbfeed'); ?></a></li>
 					<li><a href="http://wpti.ps/" target="_blank" title="WP TIPS"><?php _e('WP Tips', 'msdbfeed'); ?></a></li>
-					<li><a href="https://plus.google.com/108543145122756748887" target="_blank" title="Piet on Google+"><?php _e( 'Google+', 'msdbfeed' ); ?></a></li>
-					<li><a href="http://cn.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile"><?php _e( 'LinkedIn', 'msdbfeed' ); ?></a></li>
-					<li><a href="http://twitter.com/SenlinOnline" target="_blank" title="Twitter"><?php _e( 'Twitter: @piethfbos', 'msdbfeed' ); ?></a></li>
-					<li><a href="http://github.com/senlin" title="on Github"><?php _e( 'Github', 'msdbfeed' ); ?></a></li>
-					<li><a href="http://profiles.wordpress.org/senlin/" title="on WordPress.org"><?php _e( 'WordPress.org Profile', 'msdbfeed' ); ?></a></li>
+					<li><a href="https://plus.google.com/108543145122756748887" target="_blank" title="Piet on Google+"><?php _e( 'Google+', 'multisite-dashboard-feed-widget' ); ?></a></li>
+					<li><a href="http://cn.linkedin.com/in/pietbos" target="_blank" title="LinkedIn profile"><?php _e( 'LinkedIn', 'multisite-dashboard-feed-widget' ); ?></a></li>
+					<li><a href="http://twitter.com/SenlinOnline" target="_blank" title="Twitter"><?php _e( 'Twitter: @piethfbos', 'multisite-dashboard-feed-widget' ); ?></a></li>
+					<li><a href="http://github.com/senlin" title="on Github"><?php _e( 'Github', 'multisite-dashboard-feed-widget' ); ?></a></li>
+					<li><a href="http://profiles.wordpress.org/senlin/" title="on WordPress.org"><?php _e( 'WordPress.org Profile', 'multisite-dashboard-feed-widget' ); ?></a></li>
 				</ul>
 			
 			</div> <!-- end .inside -->
@@ -299,7 +301,7 @@ function msdbfeed_validate_options($input) {
 function msdbfeed_plugin_action_links( $links, $file ) {
 
 	if ( $file == plugin_basename( __FILE__ ) ) {
-		$msdbfeed_links = '<a href="' . get_admin_url() . 'options-general.php?page=multisite-dashboard-feed-widget/msdbfeed.php">' . __( 'Settings', 'msdbfeed' ) . '</a>';
+		$msdbfeed_links = '<a href="' . get_admin_url() . 'options-general.php?page=multisite-dashboard-feed-widget/msdbfeed.php">' . __( 'Settings', 'multisite-dashboard-feed-widget' ) . '</a>';
 		// make the 'Settings' link appear first
 		array_unshift( $links, $msdbfeed_links );
 	}
