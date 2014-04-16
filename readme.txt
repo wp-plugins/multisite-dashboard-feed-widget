@@ -3,7 +3,7 @@ Contributors: senlin
 Donate link: http://so-wp.com/donations
 Tags: multisite, dashboard, feed, widget, admin, rss
 Requires at least: 3.1.2
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: 2014.01.27
 License: GPLv2 or later
 
